@@ -1,4 +1,4 @@
-<li class="list-group-item">{{question.author}} - "{{question.content}}"
+<li class="list-group-item">{{#link-to 'question' question.id}}{{question.author}} - "{{question.content}}"{{/link-to}}
   {{#if areNotesShowing}}
     <p class="well">{{question.notes}}</p>
     <a class="small" {{action 'hideNotes'}}>hide notes</a>
