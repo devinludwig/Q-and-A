@@ -1,1 +1,13 @@
-{{yield}}
+{{#if userIsUpdating}}
+  <form class="form-group">
+    <label for="author-edit">Author:</label>
+    {{input class="form-control row" value=author id="author-edit" placeholder=question.author}}
+    <label for="content-edit">Content:</label>
+    {{input class="form-control row" value=content id="content-edit" placeholder=question.content}}
+    <label for="notes-edit">Notes:</label>
+    {{input class="form-control row" value=notes id="notes-edit" placeholder=question.notes}}
+    <button class="btn btn-danger" {{action 'updateQuestion' question}}>Update Question</button>
+  </form>
+{{else}}
+  <button class="btn btn-warning" {{action 'edit'}}>Edit this question</button>
+{{/if}}

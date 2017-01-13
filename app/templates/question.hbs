@@ -1,6 +1,6 @@
 <h2>{{model.author}} - "{{model.content}}"</h2>
-{{question-update-form question=model}}
 <p class="well">{{model.notes}}</p>
+{{question-update-form question=model updateQuestion="updateQuestion"}}
 {{#if model.answers}}
   <h3>Answers:</h3>
 {{/if}}
