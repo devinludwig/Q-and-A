@@ -1,0 +1,10 @@
+{{#if isUserAsking}}
+  <form class="form-group">
+    {{input class="form-control row" value=author id="author" placeholder="What's your name?"}}
+    {{input class="form-control row" value=content id="content" placeholder="What's your question?"}}
+    {{input class="form-control row" value=notes id="notes" placeholder="Have any notes about that?"}}
+    <button class="btn btn-danger" {{action 'saveQuestion'}}>Get Answers</button>
+  </form>
+{{else}}
+  <button class="btn btn-primary" type="button" {{action 'ask'}}>Ask Away!</button>
+{{/if}}
