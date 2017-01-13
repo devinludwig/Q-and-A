@@ -1,6 +1,8 @@
 {{question-form saveQuestion="saveQuestion"}}
-<ul>
+
+<h5>Questions:</h5>
+<ul class="list-group">
   {{#each model as |question|}}
-    <li>{{question.author}} - "{{question.content}}"</li>
+    {{question-tile question=question}}
   {{/each}}
 </ul>

@@ -1,0 +1,8 @@
+<li class="list-group-item">{{question.author}} - "{{question.content}}"
+  {{#if areNotesShowing}}
+    <p class="well">{{question.notes}}</p>
+    <a class="small" {{action 'hideNotes'}}>hide notes</a>
+  {{else}}
+    <a class="small" {{action 'showNotes'}}>see notes</a>
+  {{/if}}
+</li>
