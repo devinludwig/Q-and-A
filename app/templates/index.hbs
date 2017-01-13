@@ -1,1 +1,5 @@
-<h3>Crowd Source the Answers You Need</h3>
+<ul>
+  {{#each model as |question|}}
+    <li>{{question.author}} - "{{question.content}}"</li>
+  {{/each}}
+</ul>
