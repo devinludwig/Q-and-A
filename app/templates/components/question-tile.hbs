@@ -1,8 +1,18 @@
-<li class="list-group-item">{{#link-to 'question' question.id}}{{question.author}} - "{{question.content}}"{{/link-to}}
-  {{#if areNotesShowing}}
-    <p class="well">{{question.notes}}</p>
-    <a class="small" {{action 'hideNotes'}}>hide notes</a>
-  {{else}}
-    <a class="small" {{action 'showNotes'}}>see notes</a>
-  {{/if}}
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-sm-10">
+      {{#link-to 'question' question.id}}{{question.author}} - "{{question.content}}"{{/link-to}}
+    </div>
+
+    {{#if areNotesShowing}}
+      <div class="col-sm-12 well">
+        <p>{{question.notes}}</p>
+        <a class="small" {{action 'hideNotes'}}>hide notes</a>
+      </div>
+    {{else}}
+      <div class="col-sm-2">
+        <a class="small" {{action 'showNotes'}}>see notes</a>
+      </div>
+    {{/if}}
+  </div>
 </li>

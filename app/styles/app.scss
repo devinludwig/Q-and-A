@@ -1,4 +1,5 @@
 header {
+  padding: 3em;
   background-color: black;
     h1, h3 {
     text-align: center;
@@ -7,4 +8,13 @@ header {
   h3 {
     font-style: italic;
   }
+  a {
+    background-color: orange;
+    border: 2px black;
+    border-radius: 10px;
+  }
+}
+
+form, button {
+  margin: 10px;
 }

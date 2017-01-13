@@ -1,0 +1,7 @@
+<form>
+  <div  class="form-group">
+    {{input class="form-control row" value=content id="content" placeholder="Give your answer here."}}
+    {{input class="form-control row" value=author id="author" placeholder="What's your name?"}}
+  </div>
+  <button class="btn btn-danger" {{action 'saveAnswer'}}>Submit Answer</button>
+</form>
